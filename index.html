@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<!-- create an HTML form with input fields for username and password and a submit button-->
+<!-- The form should submit data to the login.php file. -->
+<!-- The login.php file should check the username and password against the database. -->
+<!-- If the username and password are correct, the user should be redirected to the admin.php file. -->
+<!-- If the username and password are incorrect, the user should be redirected to the index.php file. -->
+<!-- The index.php file should display an error message. -->
+<!-- The admin.php file should display a welcome message. -->
+<!-- The login.php file should display an error message. -->
+<!-- get hold of the username and password from the form and display them on the screen. -->
+
+<body>
+<form action="login.php" method="post">
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" placeholder="Enter your username">
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" placeholder="Enter your password">
+    <input type="submit" value="Login">
+</form>
+</body>
+</html>
+

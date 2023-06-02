@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head style="background-color: #f0f8ff">
+    <meta charset="UTF-8">
+    <title style="color: #ff0000">Home</title>
+</head>
+<!-- create an HTML form with input fields for username and password and a submit button-->
+<!-- The form should submit data to the login.php file. -->
+<!-- The login.php file should check the username and password against the database. -->
+<!-- If the username and password are correct, the user should be redirected to the admin.php file. -->
+<!-- If the username and password are incorrect, the user should be redirected to the index.php file. -->
+<!-- The index.php file should display an error message. -->
+<!-- The admin.php file should display a welcome message. -->
+<!-- The login.php file should display an error message. -->
+<!-- get hold of the username and password from the form and display them on the screen. -->
+<body style="background-color: #f0f8ff">
+<form action="login.php" method="post" style="background-color: #f0f8ff">
+    <label for="username" style="color: #ff0000">Username:</label>
+    <input type="text" name="username" id="username" placeholder="Enter your username">
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" placeholder="Enter your password">
+    <input type="submit" value="Login">
+</form>
+</body>
+</html>
+
+<!--login.php-->
+<!--<?php-->
+<!--// get hold of the username and password from the form and display them on the screen.-->
+<!--$username = $_POST['username'];-->
+<!--$password = $_POST['password'];-->
+<!--echo "Username: $username<br>";-->
+<!--echo "Password: $password<br>";-->
+<!--// The login.php file should check the username and password against the database.-->
+<!--// If the username and password are correct, the user should be redirected to the admin.php file.-->
+<!--// If the username and password are incorrect, the user should be redirected to the index.php file.-->
+<!--// The index.php file should display an error message.-->
+<!--// The admin.php file should display a welcome message.-->
+<!--// The login.php file should display an error message.-->
+<!--// get hold of the username and password from the form and display them on the screen.-->
+<!--// connect to the database-->
+<!--$servername = "localhost";-->
+<!--$username = "root";-->
+<!--$password = "";-->
+<!--$dbname = "mydb";-->
+<!--$conn = mysqli_connect($servername, $username, $password, $dbname);-->
+<!--// check if connection is successful-->
+<!--if (!$conn) {-->
+<!--    die("Connection failed: " . mysqli_connect_error());-->
+<!--}-->
+<!--// check if username and password are correct-->
+<!--$sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";-->
+<!--$result = mysqli_query($conn, $sql);-->
+<!--// if username and password are correct, redirect to admin.php-->
+<!--if (mysqli_num_rows($result) == 1) {-->
+<!--    header("Location: admin.php");-->
+<!--} else {-->
+<!--    // if username and password are incorrect, redirect to index.php-->
+<!--    header("Location: index.php");-->
+<!--}-->
+<!--mysqli_close($conn);-->
+<!--?>-->
